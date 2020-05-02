@@ -7,7 +7,7 @@ const {
 const router = express.Router();
 
 router.route('/')
-    .post(protect, authorize('user', 'store', 'admin'),createCart);
+    .post(protect, authorize('user', 'admin'),createCart);
 
     router.route('/:id')
     .put(protect, authorize('user', 'store', 'admin'),updateCart);

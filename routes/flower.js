@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.route('/')
     .get(getFlower)
-    .post(protect, authorize('store', 'admin'),addFlowers);
+    .post(protect, authorize( 'admin'),addFlowers);
 
 router.route('/:id')
     .get(getFlower);
